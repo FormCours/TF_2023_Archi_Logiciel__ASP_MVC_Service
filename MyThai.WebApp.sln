@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThai.Models.Data", "MyTha
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MyThai.Database", "MyThai.Database\MyThai.Database.sqlproj", "{8374A2FB-A9E5-4FD1-93AA-0FB1CB3C8D57}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools.Ado", "Tools.Ado\Tools.Ado.csproj", "{24B84D79-765D-4A13-9FCB-323BBBD85401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{8374A2FB-A9E5-4FD1-93AA-0FB1CB3C8D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8374A2FB-A9E5-4FD1-93AA-0FB1CB3C8D57}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8374A2FB-A9E5-4FD1-93AA-0FB1CB3C8D57}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{24B84D79-765D-4A13-9FCB-323BBBD85401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B84D79-765D-4A13-9FCB-323BBBD85401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B84D79-765D-4A13-9FCB-323BBBD85401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B84D79-765D-4A13-9FCB-323BBBD85401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
