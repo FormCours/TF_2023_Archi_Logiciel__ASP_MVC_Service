@@ -20,7 +20,11 @@ namespace MyThai.Models.Data.Repositories
         {
             Connection.Open();
 
-            return Connection.ExecuteReader("SELECT * FROM Dish", reader => reader.ToDish(), null);
+            return Connection.ExecuteReader(
+                "SELECT * FROM Dish WHERE IsDisabled = 0", // Simplification possible avec un View SQL
+                reader => reader.ToDish(), 
+                null
+            );
         }
 
         public IEnumerable<Dish> GetByCategory(int categoryId)
@@ -28,7 +32,7 @@ namespace MyThai.Models.Data.Repositories
             Connection.Open();
 
             return Connection.ExecuteReader(
-                "SELECT * FROM Dish WHERE Id_Category = @CatId",
+                "SELECT * FROM Dish WHERE IsDisabled = 0 AND Id_Category = @CatId",
                 reader => reader.ToDish(),
                 new { CatId =  categoryId }
             );
@@ -39,7 +43,7 @@ namespace MyThai.Models.Data.Repositories
             Connection.Open();
 
             IEnumerable<Dish> dishes = Connection.ExecuteReader(
-                "SELECT * FROM Dish WHERE Id_Dish = @Id",
+                "SELECT * FROM Dish WHERE IsDisabled = 0 AND Id_Dish = @Id",
                 reader => reader.ToDish(),
                 new { Id = id }
             );
